@@ -27,7 +27,7 @@ int main()
     x=a*b;
     g= GCD(a,b);
     l= x/g;
-    printf("GCD=%d\n",b);
+    printf("GCD=%d\n",g);
     printf("LCM=%d\n",l);
 
     return 0;
