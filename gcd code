@@ -1,0 +1,34 @@
+#include<stdio.h>
+int GCD(int a, int b)
+{
+    int c,x,p,q;
+    x=a*b;
+    if(b>a){
+        c=b;
+        b=a;
+        a=c;
+    }
+   for(int i=1; ; i++)
+    {
+        p=a/b;
+        q=a%b;
+        printf("%d = %d * %d + %d\n",a,b,p,q);
+        if(q==0) break;
+        a=b;
+        b=q;
+
+    }
+    return b;
+}
+int main()
+{
+    int a,b,g,l,x;
+    scanf("%d%d",&a,&b);
+    x=a*b;
+    g= GCD(a,b);
+    l= x/g;
+    printf("GCD=%d\n",b);
+    printf("LCM=%d\n",l);
+
+    return 0;
+}
